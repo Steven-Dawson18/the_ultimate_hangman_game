@@ -82,6 +82,15 @@ def get_game_level(picked, name):
                 hangman_image_state, guesses_left, game_level, picked, name)
 
 
+def hangman_image_state(game_level, guesses_left):
+    if game_level == "EASY":
+        hangman_image_state_easy(guesses_left)
+    elif game_level == "MEDIUM":
+        hangman_image_state_medium(guesses_left)
+    elif game_level == "HARD":
+        hangman_image_state_hard(guesses_left)
+
+
 def update(word_as_a_list, secret_word):
     """
     This function updates the secret word with the correct
