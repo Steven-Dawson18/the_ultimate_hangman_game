@@ -25,7 +25,7 @@ def game_choice(name):
                 allText = file.read()
                 words = list(map(str, allText.split()))
                 picked = random.choice(words).upper()
-                print(f"{name}, you chose the easy words")
+                print(f"{name}, you chose the dragon words")
                 get_game_level(picked, name)
                 break
         elif game_choice == "CITIES":
@@ -33,7 +33,7 @@ def game_choice(name):
                 allText = file.read()
                 words = list(map(str, allText.split()))
                 picked = random.choice(words).upper()
-                print(f"{name}, you chose the medium words")
+                print(f"{name}, you chose the cities words")
                 get_game_level(picked, name)
                 break
         elif game_choice == "STANDARD":
@@ -41,12 +41,12 @@ def game_choice(name):
                 allText = file.read()
                 words = list(map(str, allText.split()))
                 picked = random.choice(words).upper()
-                print(f"{name}, you chose the hard words")
+                print(f"{name}, you chose the standard words")
                 get_game_level(picked, name)
                 break
         else:
             print(f"{name} that is not a valid choice, please try again")
-            print("You must chose from, EASY, MEDIUM, HARD")
+            print("You must chose from, DRAGON, CITIES or STANDARD")
             print("\n")
             continue
 
@@ -101,7 +101,7 @@ def update(word_as_a_list, secret_word):
 
 def run_game_choice(hangman_image_state, guesses_left, game_level, picked, name):
     """
-    This function choses which set of words to chose from
+    This function chooses which set of words to chose from
     """
 
     print("The word has", len(picked), "letters")
