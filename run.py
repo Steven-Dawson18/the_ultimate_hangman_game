@@ -10,31 +10,34 @@ def user_input():
     print('Choose from the 3 options....')
     print("DRAGON, CITIES or STANDARD")
     print("\n")
+    get_random_word()
 
 
 def get_random_word():
     """
     This function returns a random word to start the game
     """
-
-    if game_choice == "DRAGON":
-        with open("dragon_words.txt", "r") as file:
-            allText = file.read()
-            words = list(map(str, allText.split()))
-            picked = random.choice(words).upper()
-            print(picked)
-    elif game_choice == "CITIES":
-        with open("cities_words.txt", "r") as file:
-            allText = file.read()
-            words = list(map(str, allText.split()))
-            picked = random.choice(words).upper()
-            print(picked)
-    elif game_choice == "STANDARD":
-        with open("words.txt", "r") as file:
-            allText = file.read()
-            words = list(map(str, allText.split()))
-            picked = random.choice(words).upper()
-            print(picked)
+    while True:
+        game_choice = input("Please choose your game: ").upper()
+        print("\n")
+        if game_choice == "DRAGON":
+            with open("dragon_words.txt", "r") as file:
+                allText = file.read()
+                words = list(map(str, allText.split()))
+                picked = random.choice(words).upper()
+                run_game_choice(hangman_image_state, guesses_left, picked, name)
+        elif game_choice == "CITIES":
+            with open("cities_words.txt", "r") as file:
+                allText = file.read()
+                words = list(map(str, allText.split()))
+                picked = random.choice(words).upper()
+                run_game_choice(hangman_image_state, guesses_left, picked, name)
+        elif game_choice == "STANDARD":
+            with open("words.txt", "r") as file:
+                allText = file.read()
+                words = list(map(str, allText.split()))
+                picked = random.choice(words).upper()
+                run_game_choice(hangman_image_state, guesses_left, picked, name)
 
 
 def hangman_image_state(guesses_left):
@@ -99,6 +102,23 @@ def hangman_image_state(guesses_left):
         print('     ',  '|   / \\')
         print('     ',  '|     ')
         print('--------------')
+
+
+def run_game_choice(hangman_image_state, guesses_left, picked, name):
+    """
+    This function choses which set of words to chose from
+    """
+
+    print(f"{name} game started")
+    print(picked)
+    print("The word has", len(picked), "letters")
+    print(f"{name}, your chosen word is: ")
+    print("\n")
+    secret_word = list("-") * len(picked)
+    word_as_a_list = list(picked)
+    print("\n")
+    guessed_letters = []
+    guessed = False
 
 
 user_input()
