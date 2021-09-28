@@ -1,4 +1,7 @@
 import random
+from hangman_pictures import hangman_image_state_easy
+from hangman_pictures import hangman_image_state_medium
+from hangman_pictures import hangman_image_state_hard
 
 
 def user_input():
@@ -77,70 +80,6 @@ def get_game_level(picked, name):
             hangman_image_state(game_level, guesses_left)
             run_game_choice(
                 hangman_image_state, guesses_left, game_level, picked, name)
-                
-
-def hangman_image_state(guesses_left):
-    """
-    This function shows the hangman image depending on
-    how many guesses left the user has.
-    """
-
-    if guesses_left == 6:
-        print('     ',  '------')
-        print('     ',  '|    |')
-        print('     ',  '|     ')
-        print('     ',  '|     ')
-        print('     ',  '|     ')
-        print('     ',  '|     ')
-        print('--------------')
-    if guesses_left == 5:
-        print('     ',  '------')
-        print('     ',  '|    |')
-        print('     ',  '|    O')
-        print('     ',  '|     ')
-        print('     ',  '|     ')
-        print('     ',  '|     ')
-        print('--------------')
-    if guesses_left == 4:
-        print('     ',  '------')
-        print('     ',  '|    |')
-        print('     ',  '|    O')
-        print('     ',  '|    |')
-        print('     ',  '|     ')
-        print('     ',  '|     ')
-        print('--------------')
-    if guesses_left == 3:
-        print('     ',  '------')
-        print('     ',  '|    |')
-        print('     ',  '|    O')
-        print('     ',  '|   /|')
-        print('     ',  '|     ')
-        print('     ',  '|     ')
-        print('--------------')
-    if guesses_left == 2:
-        print('     ',  '------')
-        print('     ',  '|    |')
-        print('     ',  '|    O')
-        print('     ',  '|   /|\\')
-        print('     ',  '|     ')
-        print('     ',  '|     ')
-        print('--------------')
-    if guesses_left == 1:
-        print('     ',  '------')
-        print('     ',  '|    |')
-        print('     ',  '|    O')
-        print('     ',  '|   /|\\')
-        print('     ',  '|   / ')
-        print('     ',  '|     ')
-        print('--------------')
-    if guesses_left == 0:
-        print('     ',  '------')
-        print('     ',  '|    |')
-        print('     ',  '|    O')
-        print('     ',  '|   /|\\')
-        print('     ',  '|   / \\')
-        print('     ',  '|     ')
-        print('--------------')
 
 
 def update(word_as_a_list, secret_word):
