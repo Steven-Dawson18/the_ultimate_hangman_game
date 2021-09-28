@@ -2,6 +2,7 @@ import random
 from hangman_pictures import hangman_image_state_easy
 from hangman_pictures import hangman_image_state_medium
 from hangman_pictures import hangman_image_state_hard
+from time import sleep
 
 
 def user_input():
@@ -88,6 +89,13 @@ def hangman_image_state(game_level, guesses_left):
         hangman_image_state_hard(guesses_left)
 
 
+def think():
+    for i in range(7):
+        print(".")
+        sleep(.5)
+    print()
+
+
 def update(word_as_a_list, secret_word):
     """
     This function updates the secret word with the correct
@@ -106,6 +114,8 @@ def run_game_choice(hangman_image_state, guesses_left, game_level, picked, name)
 
     print("The word has", len(picked), "letters")
     print(f"{name}, you have {guesses_left} guesses")
+    print("Let me think of a word")
+    think()
     print(f"{name}, your chosen word is: ")
     print("\n")
     secret_word = list("-") * len(picked)
@@ -116,6 +126,8 @@ def run_game_choice(hangman_image_state, guesses_left, game_level, picked, name)
     guessed = False
     while not guessed and guesses_left > 0:
         guess = input(f"{name}, please guess a letter:\n")[0].upper()
+        print("Let me check")
+        think()
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
                 print(f"{name}, You already guessed that letter {guess}")
