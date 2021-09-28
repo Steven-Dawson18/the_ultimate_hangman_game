@@ -190,6 +190,7 @@ def run_game_choice(
                     if play_again == "Y":
                         user_input()
                     else:
+                        print(f"Thanks for playing {name}. Play again soon.")
                         exit()
                     print("\n")
                     print("================================")
@@ -221,6 +222,7 @@ def run_game_choice(
                     if play_again == "Y":
                         user_input()
                     else:
+                        print(f"Thanks for playing {name}. Play again soon.")
                         exit()
 
 
