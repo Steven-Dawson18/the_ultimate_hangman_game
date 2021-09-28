@@ -108,6 +108,7 @@ def run_game_choice(hangman_image_state, guesses_left, game_level, picked, name)
     """
 
     print("The word has", len(picked), "letters")
+    print(f"{name}, you have {guesses_left} guesses")
     print(f"{name}, your chosen word is: ")
     print("\n")
     secret_word = list("-") * len(picked)
