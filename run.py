@@ -137,7 +137,7 @@ def run_game_choice(hangman_image_state, guesses_left, game_level, picked, name)
                 print(f"{name}, {guess}, is not in the word.")
                 guesses_left -= 1
                 guessed_letters.append(guess)
-                print(f"{name} the letters you have guessed so far are {guessed_letters}")
+                print(f"{name} letters guessed so far are {guessed_letters}")
                 print(f"{name}, you have {guesses_left} guesses left")
                 print("\n")
                 update(word_as_a_list, secret_word)
@@ -160,7 +160,7 @@ def run_game_choice(hangman_image_state, guesses_left, game_level, picked, name)
             elif guess in picked:
                 print(f"Good job {name}, {guess}, is in the word!")
                 guessed_letters.append(guess)
-                print(f"{name} the letters you have guessed so far are {guessed_letters}")
+                print(f"{name} letters guessed so far are {guessed_letters}")
                 index = 0
                 for i in word_as_a_list:
                     if i == guess:
