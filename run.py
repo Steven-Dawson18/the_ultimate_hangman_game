@@ -154,9 +154,10 @@ def run_game_choice(
     guessed_letters = []
     guessed = False
     while not guessed and guesses_left > 0:
-        guess = input(f"{name}, please guess a letter:\n")[0].upper()
+        guess = input(f"{name}, please guess a letter:\n").upper()
         print("Let me check")
         think()
+        print("\n")
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
                 print(f"{name}, You already guessed that letter {guess}")
@@ -224,6 +225,15 @@ def run_game_choice(
                     else:
                         print(f"Thanks for playing {name}. Play again soon.")
                         exit()
+        elif len(guess) == 0:
+            print(f"{name} that is not a valid input, try again")
+            continue
+        elif len(guess) > 1 and guess.isalpha():
+            print(f"{name} that is not a valid input, try again")
+            continue
+        else:
+            print(f"{name} numbers are not valid, try again")
+            continue
 
 
 user_input()
