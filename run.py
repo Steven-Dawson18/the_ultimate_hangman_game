@@ -13,10 +13,7 @@ def user_input():
     game_choice(name)
 
 
-def get_random_word(name):
-    """
-    This function returns a random word to start the game
-    """
+def game_choice(name):
     while True:
         game_choice = input("Please choose your game: ").upper()
         print("\n")
@@ -25,23 +22,62 @@ def get_random_word(name):
                 allText = file.read()
                 words = list(map(str, allText.split()))
                 picked = random.choice(words).upper()
-                return picked
-                run_game_choice(game_choice, hangman_image_state, picked, name)
+                # print(picked)
+                print(f"{name}, you chose the easy words")
+                # run_game_choice(picked, name)
+                get_game_level(picked, name)
+                break
         elif game_choice == "CITIES":
             with open("cities_words.txt", "r") as file:
                 allText = file.read()
                 words = list(map(str, allText.split()))
                 picked = random.choice(words).upper()
-                return picked
-                run_game_choice(game_choice, hangman_image_state, picked, name)
+                print(f"{name}, you chose the medium words")
+                # run_game_choice(picked, name)
+                get_game_level(picked, name)
+                break
         elif game_choice == "STANDARD":
             with open("words.txt", "r") as file:
                 allText = file.read()
                 words = list(map(str, allText.split()))
                 picked = random.choice(words).upper()
-                return picked
-                run_game_choice(game_choice, hangman_image_state, picked, name)
+                print(f"{name}, you chose the hard words")
+                get_game_level(picked, name)
+                break
+        else:
+            print(f"{name} that is not a valid choice, please try again")
+            print("You must chose from, EASY, MEDIUM, HARD")
+            print("\n")
+            continue
 
+
+def get_game_level(picked, name):
+    """
+    This function will take the users choice of difficulty for
+    the game The choices are easy with 8 chances, medium
+    with 6 chances, hard with 3 chances
+    """
+    while True:
+        print('Chose from the 3 options....')
+        print("EASY MEDIUM HARD")
+        print("\n")
+        game_level = input("Please choose your level: ").upper()
+        if game_level == "EASY":
+            guesses_left = 8
+            hangman_image_state(game_level, guesses_left)
+            run_game_choice(
+                hangman_image_state, guesses_left, game_level, picked, name)
+        elif game_level == "MEDIUM":
+            guesses_left = 6
+            hangman_image_state(game_level, guesses_left)
+            run_game_choice(
+                hangman_image_state, guesses_left, game_level, picked, name)
+        elif game_level == "HARD":
+            guesses_left = 3
+            hangman_image_state(game_level, guesses_left)
+            run_game_choice(
+                hangman_image_state, guesses_left, game_level, picked, name)
+                
 
 def hangman_image_state(guesses_left):
     """
