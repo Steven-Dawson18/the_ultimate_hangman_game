@@ -107,8 +107,6 @@ def run_game_choice(hangman_image_state, guesses_left, game_level, picked, name)
     This function choses which set of words to chose from
     """
 
-    print(f"{name} game started")
-    print(picked)
     print("The word has", len(picked), "letters")
     print(f"{name}, your chosen word is: ")
     print("\n")
@@ -186,5 +184,5 @@ def run_game_choice(hangman_image_state, guesses_left, game_level, picked, name)
                     else:
                         exit()
 
-                        
+
 user_input()
