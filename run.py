@@ -59,7 +59,7 @@ def get_game_level(picked, name):
     with 6 chances, hard with 3 chances
     """
     while True:
-        print('Chose from the 3 options....')
+        print('Choose from the 3 difficulty options....')
         print("EASY MEDIUM HARD")
         print("\n")
         game_level = input("Please choose your level:\n").upper()
@@ -90,8 +90,12 @@ def hangman_image_state(game_level, guesses_left):
 
 
 def think():
+    """
+    This function makes the game wait which makes it
+    appear that the computer is thinking.
+    """
     for i in range(7):
-        print(".")
+        print(".", end="")
         sleep(.5)
     print()
 
@@ -104,10 +108,11 @@ def update(word_as_a_list, secret_word):
 
     for i in secret_word:
         secret_word = "".join(word_as_a_list)
-        print(i, end = " ")
+        print(i, end=" ")
 
 
-def run_game_choice(hangman_image_state, guesses_left, game_level, picked, name):
+def run_game_choice(
+        hangman_image_state, guesses_left, game_level, picked, name):
     """
     This function chooses which set of words to chose from
     """
@@ -157,7 +162,7 @@ def run_game_choice(hangman_image_state, guesses_left, game_level, picked, name)
                 if guesses_left == 0:
                     print(f"{name} you lost! The secret word was {picked}")
                     print(f"{name}, you have {guesses_left} guesses left")
-                    play_again = input("Do you want to play again? Y/N:\n").upper()
+                    play_again = input(f"{name} play again? Y/N:\n").upper()
                     if play_again == "Y":
                         user_input()
                     else:
@@ -188,7 +193,7 @@ def run_game_choice(hangman_image_state, guesses_left, game_level, picked, name)
                     print("\n")
                     print("================================")
                     print("\n")
-                    play_again = input("Do you want to play again? Y/N:\n").upper()
+                    play_again = input(f"{name}play again? Y/N:\n").upper()
                     if play_again == "Y":
                         user_input()
                     else:
