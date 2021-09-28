@@ -217,7 +217,7 @@ def run_game_choice(
                     print("\n")
                     print("================================")
                     print("\n")
-                    play_again = input(f"{name}play again? Y/N:\n").upper()
+                    play_again = input(f"{name} play again? Y/N:\n").upper()
                     if play_again == "Y":
                         user_input()
                     else:
