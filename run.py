@@ -81,6 +81,10 @@ def get_game_level(picked, name):
 
 
 def hangman_image_state(game_level, guesses_left):
+    """
+    This function changes the hangman image depending
+    on the level chosen by the user.
+    """
     if game_level == "EASY":
         hangman_image_state_easy(guesses_left)
     elif game_level == "MEDIUM":
@@ -94,10 +98,10 @@ def think():
     This function makes the game wait which makes it
     appear that the computer is thinking.
     """
-    for i in range(7):
-        print(".", end="")
-        sleep(.5)
-    print()
+    for i in range(5):
+        i = "."
+        print(i, end=" ")
+        sleep(.3)
 
 
 def update(word_as_a_list, secret_word):
@@ -121,6 +125,7 @@ def run_game_choice(
     print(f"{name}, you have {guesses_left} guesses")
     print("Let me think of a word")
     think()
+    print("\n")
     print(f"{name}, your chosen word is: ")
     print("\n")
     secret_word = list("-") * len(picked)
