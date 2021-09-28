@@ -7,7 +7,7 @@ from hangman_pictures import hangman_image_state_hard
 def user_input():
     print("HANGMAN")
     print("\n")
-    name = str(input("Input your name: ")).upper()
+    name = str(input("Input your name:\n")).upper()
     print("\n")
     print(f"Hi {name} are you ready to play hangman?")
     print('Choose from the 3 options....')
@@ -61,7 +61,7 @@ def get_game_level(picked, name):
         print('Chose from the 3 options....')
         print("EASY MEDIUM HARD")
         print("\n")
-        game_level = input("Please choose your level: ").upper()
+        game_level = input("Please choose your level:\n").upper()
         if game_level == "EASY":
             guesses_left = 8
             hangman_image_state(game_level, guesses_left)
@@ -115,7 +115,7 @@ def run_game_choice(hangman_image_state, guesses_left, game_level, picked, name)
     guessed_letters = []
     guessed = False
     while not guessed and guesses_left > 0:
-        guess = input(f"{name}, please guess a letter: ")[0].upper()
+        guess = input(f"{name}, please guess a letter:\n")[0].upper()
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
                 print(f"{name}, You already guessed that letter {guess}")
@@ -145,7 +145,7 @@ def run_game_choice(hangman_image_state, guesses_left, game_level, picked, name)
                 if guesses_left == 0:
                     print(f"{name} you lost! The secret word was {picked}")
                     print(f"{name}, you have {guesses_left} guesses left")
-                    play_again = input("Do you want to play again? Y/N: ").upper()
+                    play_again = input("Do you want to play again? Y/N:\n").upper()
                     if play_again == "Y":
                         user_input()
                     else:
@@ -176,7 +176,7 @@ def run_game_choice(hangman_image_state, guesses_left, game_level, picked, name)
                     print("\n")
                     print("================================")
                     print("\n")
-                    play_again = input("Do you want to play again? Y/N: ").upper()
+                    play_again = input("Do you want to play again? Y/N:\n").upper()
                     if play_again == "Y":
                         user_input()
                     else:
