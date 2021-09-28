@@ -102,87 +102,89 @@ def update(word_as_a_list, secret_word):
         print(i, end = " ")
 
 
-def run_game_choice(game_choice, hangman_image_state, picked, name):
+def run_game_choice(hangman_image_state, guesses_left, game_level, picked, name):
     """
     This function choses which set of words to chose from
     """
-    if game_choice == 'DRAGON':
-        print(f"{name}, you chose the medium words")
-        picked = get_random_word(name)
-        print("The word has", len(picked), "letters")
-        print(f"{name}, your chosen word is: ")
-        print("\n")
-        secret_word = list("-") * len(picked)
-        word_as_a_list = list(picked)
-        update(word_as_a_list, secret_word)
-        print("\n")
-        guessed_letters = []
-        guessed = False
-        guesses_left = 6
-        while not guessed and guesses_left > 0:
-            guess = input(f"{name}, please guess a letter: ").upper()
-            if len(guess) == 1 and guess.isalpha():
-                if guess in guessed_letters:
-                    print(f"{name}, You already guessed that letter {guess}")
-                    print("Have another guess")
-                    print(guessed_letters)
-                    print("\n")
-                    update(word_as_a_list, secret_word)
-                    print("\n")
-                    hangman_image_state(guesses_left)
-                    print("\n")
-                    print("================================")
-                    print("\n")
-                elif guess not in picked:
-                    print(f"{name}, {guess}, is not in the word.")
-                    guesses_left -= 1
-                    guessed_letters.append(guess)
-                    print(f"{name} the letters you have guessed so far are {guessed_letters}")
-                    print(f"{name}, you have {guesses_left} guesses left")
-                    print("\n")
-                    update(word_as_a_list, secret_word)
-                    print("\n")
-                    hangman_image_state(guesses_left)
-                    print("\n")
-                    print("================================")
-                    print("\n")
-                    if guesses_left == 0:
-                        print(f"Unlucky {name} you lost! the secret word was {picked}")
-                        play_again = input("Do you want to play again? Y/N: ").upper()
-                        if play_again == "y":
-                            run_game_choice()
-                        else:
-                            exit()
-                        print("\n")
-                        print("================================")
-                        print("\n")
-                elif guess in picked:
-                    print(f"Good job {name}, {guess}, is in the word!")
-                    guessed_letters.append(guess)
-                    print(f"{name} the letters you have guessed so far are {guessed_letters}")
-                    index = 0
-                    for i in word_as_a_list:
-                        if i == guess:
-                            secret_word[index] = guess
-                        index += 1
-                    print("\n")
-                    update(word_as_a_list, secret_word)
-                    print("\n")
-                    hangman_image_state(guesses_left)
-                    print("\n")
-                    print("================================")
-                    print("\n")
-                    if "-" not in secret_word:
-                        guessed = True
-                        print(f"Great job {name}, you guessed it!")
-                        print(f"The secret word I chose was {picked}")
-                        print("\n")
-                        print("================================")
-                        print("\n")
-                        play_again = input("Do you want to play again? Y/N: ").upper()
-                        if play_again == "y":
-                            get_game_choice()
-                        else:
-                            exit()
 
+    print(f"{name} game started")
+    print(picked)
+    print("The word has", len(picked), "letters")
+    print(f"{name}, your chosen word is: ")
+    print("\n")
+    secret_word = list("-") * len(picked)
+    word_as_a_list = list(picked)
+    update(word_as_a_list, secret_word)
+    print("\n")
+    guessed_letters = []
+    guessed = False
+    # guesses_left = 6
+    while not guessed and guesses_left > 0:
+        guess = input(f"{name}, please guess a letter: ")[0].upper()
+        if len(guess) == 1 and guess.isalpha():
+            if guess in guessed_letters:
+                print(f"{name}, You already guessed that letter {guess}")
+                print("Have another guess")
+                print(guessed_letters)
+                print("\n")
+                update(word_as_a_list, secret_word)
+                print("\n")
+                hangman_image_state(game_level, guesses_left)
+                print("\n")
+                print("================================")
+                print("\n")
+            elif guess not in picked:
+                print(f"{name}, {guess}, is not in the word.")
+                guesses_left -= 1
+                guessed_letters.append(guess)
+                print(f"{name} the letters you have guessed so far are {guessed_letters}")
+                print(f"{name}, you have {guesses_left} guesses left")
+                print("\n")
+                update(word_as_a_list, secret_word)
+                print("\n")
+                hangman_image_state(game_level, guesses_left)
+                print("\n")
+                print("================================")
+                print("\n")
+                if guesses_left == 0:
+                    print(f"Unlucky {name} you lost! the secret word was {picked}")
+                    play_again = input("Do you want to play again? Y/N: ").upper()
+                    if play_again == "Y":
+                        user_input()
+                    else:
+                        exit()
+                    print("\n")
+                    print("================================")
+                    print("\n")
+            elif guess in picked:
+                print(f"Good job {name}, {guess}, is in the word!")
+                guessed_letters.append(guess)
+                print(f"{name} the letters you have guessed so far are {guessed_letters}")
+                index = 0
+                for i in word_as_a_list:
+                    if i == guess:
+                        secret_word[index] = guess
+                    index += 1
+                print("\n")
+                update(word_as_a_list, secret_word)
+                print("\n")
+                hangman_image_state(game_level, guesses_left)
+                print("\n")
+                print("================================")
+                print("\n")
+                if "-" not in secret_word:
+                    guessed = True
+                    print(f"Great job {name}, you guessed it!")
+                    print(f"The secret word I chose was {picked}")
+                    print("\n")
+                    print("================================")
+                    print("\n")
+                    play_again = input("Do you want to play again? Y/N: ").upper()
+                    print(play_again)
+                    if play_again == "Y":
+                        user_input()
+                    else:
+                        exit()
+
+                        
 user_input()
