@@ -25,9 +25,7 @@ def game_choice(name):
                 allText = file.read()
                 words = list(map(str, allText.split()))
                 picked = random.choice(words).upper()
-                # print(picked)
                 print(f"{name}, you chose the easy words")
-                # run_game_choice(picked, name)
                 get_game_level(picked, name)
                 break
         elif game_choice == "CITIES":
@@ -36,7 +34,6 @@ def game_choice(name):
                 words = list(map(str, allText.split()))
                 picked = random.choice(words).upper()
                 print(f"{name}, you chose the medium words")
-                # run_game_choice(picked, name)
                 get_game_level(picked, name)
                 break
         elif game_choice == "STANDARD":
@@ -117,7 +114,6 @@ def run_game_choice(hangman_image_state, guesses_left, game_level, picked, name)
     print("\n")
     guessed_letters = []
     guessed = False
-    # guesses_left = 6
     while not guessed and guesses_left > 0:
         guess = input(f"{name}, please guess a letter: ")[0].upper()
         if len(guess) == 1 and guess.isalpha():
@@ -147,7 +143,7 @@ def run_game_choice(hangman_image_state, guesses_left, game_level, picked, name)
                 print("================================")
                 print("\n")
                 if guesses_left == 0:
-                    print(f"Unlucky {name} you lost! the secret word was {picked}")
+                    print(f"{name} you lost! The secret word was {picked}")
                     print(f"{name}, you have {guesses_left} guesses left")
                     play_again = input("Do you want to play again? Y/N: ").upper()
                     if play_again == "Y":
@@ -181,7 +177,6 @@ def run_game_choice(hangman_image_state, guesses_left, game_level, picked, name)
                     print("================================")
                     print("\n")
                     play_again = input("Do you want to play again? Y/N: ").upper()
-                    print(play_again)
                     if play_again == "Y":
                         user_input()
                     else:
