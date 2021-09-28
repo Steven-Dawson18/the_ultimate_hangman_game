@@ -104,6 +104,16 @@ def hangman_image_state(guesses_left):
         print('--------------')
 
 
+def update(word_as_a_list, secret_word):
+    """
+    This function updates the secret word with the correct
+    guessed letter T-I-S-I-S-T-E-GUESS
+    """
+
+    for i in secret_word:
+        secret_word = "".join(word_as_a_list)
+        print(i, end = " ")
+
 def run_game_choice(hangman_image_state, guesses_left, picked, name):
     """
     This function choses which set of words to chose from
