@@ -6,22 +6,38 @@ from time import sleep
 
 
 def user_input():
+    """
+    This function introduces the game and takes a user input
+    for their name which will be refferenced throughout the
+    game.
+    """
     print("HANGMAN")
     print("\n")
+    # Collects users name
     name = str(input("Input your name:\n")).upper()
     print("\n")
     print(f"Hi {name} are you ready to play hangman?")
+    print("There are three catagories to choose from")
+    print("How to train your dragon")
+    print("Worlds major Cities")
+    print("Standard hangman catagory")
     print('Choose from the 3 options....')
-    print("DRAGON, CITIES or STANDARD")
+    print("Enter either: DRAGON, CITIES or STANDARD")
     print("\n")
     game_choice(name)
 
 
 def game_choice(name):
+    """
+    This function will take the input from the user and select
+    a random word from the appropriate word.txt file.
+    """
     while True:
+        # Collects users ngame choice
         game_choice = input("Please choose your game: ").upper()
         print("\n")
         if game_choice == "DRAGON":
+            # selects a random word from dragon_words.txt
             with open("dragon_words.txt", "r") as file:
                 allText = file.read()
                 words = list(map(str, allText.split()))
@@ -30,6 +46,7 @@ def game_choice(name):
                 get_game_level(picked, name)
                 break
         elif game_choice == "CITIES":
+            # selects a random word from cities_words.txt
             with open("cities_words.txt", "r") as file:
                 allText = file.read()
                 words = list(map(str, allText.split()))
@@ -38,6 +55,7 @@ def game_choice(name):
                 get_game_level(picked, name)
                 break
         elif game_choice == "STANDARD":
+            # selects a random word from words.txt
             with open("words.txt", "r") as file:
                 allText = file.read()
                 words = list(map(str, allText.split()))
@@ -62,6 +80,7 @@ def get_game_level(picked, name):
         print('Choose from the 3 difficulty options....')
         print("EASY MEDIUM HARD")
         print("\n")
+        # Collects difficulty option from the user
         game_level = input("Please choose your level:\n").upper()
         if game_level == "EASY":
             guesses_left = 8
