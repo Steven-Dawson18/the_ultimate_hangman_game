@@ -33,3 +33,10 @@ The live game can be viewed [here](https://ultimate-hangman.herokuapp.com/).
 * Result of guess is displayed to the user.
 * Result of the game is displayed to the user.
 * An option to play again is displayed to the user.
+
+## Bugs
+### Fixed
+* I found a bug with the user guess when playing. If the user didn't enter anything or the user input more than one letter the program would just ask for the user to input a letter again. So I added print statements to respont to the user. Also if the user input a number the program would jump back to the difficulty level choices. To solve this I used a while loop and if elif statement.
+
+### Unfixed
+* None
