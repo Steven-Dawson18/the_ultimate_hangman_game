@@ -8,3 +8,5 @@ This game of Ultimate Hangman provides the user with three optional catagories t
 
 The live game can be viewed [here](https://ultimate-hangman.herokuapp.com/).
 
+## Wireframes
+[Click here for the desktop wireframe](assets/images/hangman.png)
