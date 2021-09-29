@@ -11,7 +11,9 @@ def user_input():
     for their name which will be refferenced throughout the
     game.
     """
+    print("*******************")
     print("HANGMAN")
+    print("*******************")
     print("\n")
     # Collects users name
     name = str(input("Input your name:\n")).upper()
