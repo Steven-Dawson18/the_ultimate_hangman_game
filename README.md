@@ -10,3 +10,15 @@ The live game can be viewed [here](https://ultimate-hangman.herokuapp.com/).
 
 ## Wireframes
 [Click here for the desktop wireframe](assets/images/hangman.png)
+
+## Client Stories
+
+1. As an new visitor to the website, I want to easily be able to understand what the game is about.
+2. As an new visitor to the website, I want to easily be able to understand how the game works.
+3. As a visitor to the website, I want to have a choice of game catagories.
+4. As a visitor to the website, I want to have a choice of difficulty levels.
+5. As a user I want to know if I guessed correctly and see it displayed in the hidden word.
+6. As a user I want to know if I guessed incorrectly and see a hangman image and how many guesses I have left.
+7. As a user I want to know if I have already guessed a letter.
+8. As a user I want to know if I have won or lost.
+9. As a user I want to have the choice to play again or not..
