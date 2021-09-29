@@ -21,4 +21,15 @@ The live game can be viewed [here](https://ultimate-hangman.herokuapp.com/).
 6. As a user I want to know if I guessed incorrectly and see a hangman image and how many guesses I have left.
 7. As a user I want to know if I have already guessed a letter.
 8. As a user I want to know if I have won or lost.
-9. As a user I want to have the choice to play again or not..
+9. As a user I want to have the choice to play again or not.
+
+## Features
+
+* User input to collect the name of the user to use in throughout the game.
+* User has choice to pick from three categoris of words fot the game.
+* User has choice of three difficulty levels for their game.
+* The chosen word for the game is displayed as a hidden word.
+* The hangman image is displayed along with how many guesses the user has remaining.
+* Result of guess is displayed to the user.
+* Result of the game is displayed to the user.
+* An option to play again is displayed to the user.
