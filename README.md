@@ -64,9 +64,16 @@ This project has been tested throughout its inception. Each input has been thoro
 ### Testing Client Stories
 
 1. As an new visitor to the website, I want to easily be able to understand what the game is about.
+
 [Game information](assets/images/client_story_1.png)
 
+* The game immediately informs you that you are about to play hangman. Once you enter your name you are then told how to play the game, as shown in the image above.
+
 2. As an new visitor to the website, I want to easily be able to understand how the game works.
+
+[Game information](assets/images/client_story_1.png)
+
+* The game is explained
 3. As a visitor to the website, I want to have a choice of game catagories.
 4. As a visitor to the website, I want to have a choice of difficulty levels.
 5. As a user I want to know if I guessed correctly and see it displayed in the hidden word.
