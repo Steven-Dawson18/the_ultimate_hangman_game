@@ -43,6 +43,12 @@ The live game can be viewed [here](https://ultimate-hangman.herokuapp.com/).
 * None
 
 ## Testing
+
+The website was extensively tested as it was developed using:
+* console.log().
+* terminal by printing the expected outcome.
+* Testing scenarios manually.
+
 This project has been tested throughout its inception. Each input has been thoroughly tested to make sure that any invalid inputs are handled correctly and a response is shown to the user.
 
 * Name input - This has been tested so that it will only accept letters. I did this by creating a while loop to check if the input is alpha(). To make sure that the input is correct I have made sure that any input is converted to capitals using the upper() method.
@@ -55,13 +61,23 @@ This project has been tested throughout its inception. Each input has been thoro
 
 * Play again input - This has been tested so that it will only accept the corect letters. To make sure that the input is correct I have made sure that any input is converted to capitals using the upper() method. It checkes for the "Y" and if so it will start the game again, if anythong else is pressed the game will end and a response will be returned to the user to say Goodbye.
 
-### Validator Testing
-The website was extensively tested as it was developed using:
-* console.log().
-* terminal by printing the expected outcome.
-* Testing scenarios manually.
-* Each Python file was run through pep8 online and returned no errors.
+### Testing Client Stories
 
+1. As an new visitor to the website, I want to easily be able to understand what the game is about.
+[Game information](assets/images/client_story_1.png)
+
+2. As an new visitor to the website, I want to easily be able to understand how the game works.
+3. As a visitor to the website, I want to have a choice of game catagories.
+4. As a visitor to the website, I want to have a choice of difficulty levels.
+5. As a user I want to know if I guessed correctly and see it displayed in the hidden word.
+6. As a user I want to know if I guessed incorrectly and see a hangman image and how many guesses I have left.
+7. As a user I want to know if I have already guessed a letter.
+8. As a user I want to know if I have won or lost.
+9. As a user I want to have the choice to play again or not.
+
+### Validator Testing
+
+* Each Python file was run through pep8 online and returned no errors.
 [Click here for the PEP8 online Validation](assets/images/pep8_validation.png)
 
 ## Deployment on Heroku

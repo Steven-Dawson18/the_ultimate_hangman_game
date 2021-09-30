@@ -15,9 +15,15 @@ def user_input():
     print("HANGMAN")
     print("*******************")
     print("\n")
+    print("This is a game where you have to guess a hidden word.")
+    print("\n")
+    print("There are three catagories and levels to choose from.")
+    print("\n")
+    print("To start please....")
+    print("\n")
     while True:
         # Collects users name
-        name = str(input("Input your name:\n")).upper()
+        name = str(input("Enter your name:\n")).upper()
         if not name.isalpha():
             print("You. ust enter a character for your name")
             continue
