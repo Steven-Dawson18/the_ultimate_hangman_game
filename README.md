@@ -82,11 +82,16 @@ This project has been tested throughout its inception. Each input has been thoro
 
 4. As a user I want to know if I guessed correctly and see it displayed in the hidden word.
 
-[Game Levels](assets/images/client_story_4.png)
+[Guess confirmation](assets/images/client_story_4.png)
 
 * The user is congratulated on getting a guess correct and the letter guessed is input into the hidden word and displayed to the user.
 
 5. As a user I want to know if I guessed incorrectly and see a hangman image and how many guesses I have left.
+
+[Guess incorrect](assets/images/client_story_5.png)
+
+* The user is informed if their guess is incorrect. A list of the letters they have guessed so far will be displayed along with the number of guesses they have left and an image of the hangman position they are at.
+
 6. As a user I want to know if I have already guessed a letter.
 7. As a user I want to know if I have won or lost.
 8. As a user I want to have the choice to play again or not.
