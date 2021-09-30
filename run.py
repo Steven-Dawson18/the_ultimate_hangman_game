@@ -45,35 +45,23 @@ def game_choice(name):
     This function will take the input from the user and select
     a random word from the appropriate word.txt file.
     """
+    wordsdict = {
+        "DRAGON": "dragon_words.txt",
+        "CITIES": "cities_words.txt",
+        "STANDARD": "words.txt"
+    }
     while True:
         # Collects users name choice
         game_choice = input("Please choose your game: ").upper()
         print("\n")
         if game_choice == "DRAGON":
+            x = wordsdict[game_choice]
             # selects a random word from dragon_words.txt
-            with open("dragon_words.txt", "r") as file:
+            with open(x, "r") as file:
                 allText = file.read()
                 words = list(map(str, allText.split()))
                 picked = random.choice(words).upper()
                 print(f"{name}, you chose the dragon words")
-                get_game_level(picked, name)
-                break
-        elif game_choice == "CITIES":
-            # selects a random word from cities_words.txt
-            with open("cities_words.txt", "r") as file:
-                allText = file.read()
-                words = list(map(str, allText.split()))
-                picked = random.choice(words).upper()
-                print(f"{name}, you chose the cities words")
-                get_game_level(picked, name)
-                break
-        elif game_choice == "STANDARD":
-            # selects a random word from words.txt
-            with open("words.txt", "r") as file:
-                allText = file.read()
-                words = list(map(str, allText.split()))
-                picked = random.choice(words).upper()
-                print(f"{name}, you chose the standard words")
                 get_game_level(picked, name)
                 break
         else:
