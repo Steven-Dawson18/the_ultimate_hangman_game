@@ -51,12 +51,12 @@ def game_choice(name):
         "STANDARD": "words.txt"
     }
     while True:
-        # Collects users name choice
+        # Collects users game choice
         game_choice = input("Please choose your game: ").upper()
         print("\n")
-        if game_choice == "DRAGON":
+        if game_choice == "DRAGON" or "STANDARD" or "CITIES":
             x = wordsdict[game_choice]
-            # selects a random word from dragon_words.txt
+            # selects a random word from the appropriate .txt file
             with open(x, "r") as file:
                 allText = file.read()
                 words = list(map(str, allText.split()))
