@@ -60,9 +60,7 @@ def game_choice(name):
                 allText = file.read()
                 words = list(map(str, allText.split()))
                 picked = random.choice(words).upper()
-                # print(picked)
                 print(f"{name}, you chose the {game_choice} words")
-                # run_game_choice(picked, name)
                 get_game_level(picked, name)
                 break
         else:

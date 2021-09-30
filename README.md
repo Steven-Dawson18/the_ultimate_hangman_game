@@ -137,3 +137,18 @@ This project has been tested throughout its inception. Each input has been thoro
 * Set your deployment method to 'GitHub'
 * Search for the repository you wish to deploy from
 * Enable automatic deploy
+
+## Credits
+None
+
+### Code
+None
+
+### Content
+None
+
+### Media
+None
+
+### Acknowledgments
+My mentor Can Sucullu for his advice and guidance.
