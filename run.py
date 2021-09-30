@@ -15,18 +15,23 @@ def user_input():
     print("HANGMAN")
     print("*******************")
     print("\n")
-    # Collects users name
-    name = str(input("Input your name:\n")).upper()
-    print("\n")
-    print(f"Hi {name} are you ready to play hangman?")
-    print("There are three catagories to choose from")
-    print("How to train your dragon")
-    print("Worlds major Cities")
-    print("Standard hangman catagory")
-    print('Choose from the 3 options....')
-    print("Enter either: DRAGON, CITIES or STANDARD")
-    print("\n")
-    game_choice(name)
+    while True:
+        # Collects users name
+        name = str(input("Input your name:\n")).upper()
+        if not name.isalpha():
+            print("You. ust enter a character for your name")
+            continue
+        else:
+            print("\n")
+            print(f"Hi {name} are you ready to play hangman?")
+            print("There are three catagories to choose from")
+            print("How to train your dragon")
+            print("Worlds major Cities")
+            print("Standard hangman catagory")
+            print('Choose from the 3 options....')
+            print("Enter either: DRAGON, CITIES or STANDARD")
+            print("\n")
+            game_choice(name)
 
 
 def game_choice(name):
@@ -35,7 +40,7 @@ def game_choice(name):
     a random word from the appropriate word.txt file.
     """
     while True:
-        # Collects users ngame choice
+        # Collects users name choice
         game_choice = input("Please choose your game: ").upper()
         print("\n")
         if game_choice == "DRAGON":
@@ -67,7 +72,7 @@ def game_choice(name):
                 break
         else:
             print(f"{name} that is not a valid choice, please try again")
-            print("You must chose from, DRAGON, CITIES or STANDARD")
+            print("You must choose from, DRAGON, CITIES or STANDARD")
             print("\n")
             continue
 
@@ -75,8 +80,8 @@ def game_choice(name):
 def get_game_level(picked, name):
     """
     This function will take the users choice of difficulty for
-    the game The choices are easy with 8 chances, medium
-    with 6 chances, hard with 3 chances
+    the game. The choices are easy with 8 chances, medium
+    with 6 chances and hard with 3 chances.
     """
     while True:
         print('Choose from the 3 difficulty options....')
@@ -139,7 +144,7 @@ def update(word_as_a_list, secret_word):
 def run_game_choice(
         hangman_image_state, guesses_left, game_level, picked, name):
     """
-    This function chooses which set of words to chose from
+    This function chooses which set of words to choose from
     """
 
     print("The word has", len(picked), "letters")
@@ -234,7 +239,7 @@ def run_game_choice(
             print(f"{name} that is not a valid input, try again")
             continue
         else:
-            print(f"{name} numbers are not valid, try again")
+            print(f"{name} you must provide a letter, try again")
             continue
 
 

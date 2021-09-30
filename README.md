@@ -40,3 +40,18 @@ The live game can be viewed [here](https://ultimate-hangman.herokuapp.com/).
 
 ### Unfixed
 * None
+
+## Testing
+This project has been tested throughout its inception. Each input has been thoroughly tested to make sure that any invalid inputs are handled correctly and a response is shown to the user.
+
+* Name input - 
+
+* Game catagory input - This has been tested so that it will only accept the corect three words. To make sure that the input is correct I have made sure that any input is converted to capitals using the upper() method. I have also checked for any other invalid inputs and returned a message to the user to state the error and to input again.
+
+* Game level input - This has been tested so that it will only accept the corect three words, EASY, MEDIUM and HARD. To make sure that the input is correct I have made sure that any input is converted to capitals using the upper() method. I have also checked for any other invalid inputs and returned a message to the user to state the error and to input again.
+
+* Guess input - This has been tested so that it will only accept the corect letters. To make sure that the input is correct I have made sure that any input is converted to capitals using the upper() method. I have also checked for any other invalid inputs and returned a message to the user to state the error and to input again. For example if the user has already guessed that letter, a response to the user will read, "You have already guessed that letter" and ask them to try again whilst also showing them a list of the letters they have guessed. If the guess is not in the word, the user will get a response telling them so and a life will be lost. If the guess is in the word they will get a response congratulating them and updating the hidden word.
+
+* Play again input - This has been tested so that it will only accept the corect letters. To make sure that the input is correct I have made sure that any input is converted to capitals using the upper() method. It checkes for the "Y" and if so it will start the game again, if anythong else is pressed the game will end and a response will be returned to the user to say Goodbye.
+
+### Validator Testing
