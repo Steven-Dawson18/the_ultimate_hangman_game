@@ -45,28 +45,39 @@ def game_choice(name):
     This function will take the input from the user and select
     a random word from the appropriate word.txt file.
     """
-    wordsdict = {
-        "DRAGON": "dragon_words.txt",
-        "CITIES": "cities_words.txt",
-        "STANDARD": "words.txt"
-    }
     while True:
-        # Collects users game choice
         game_choice = input("Please choose your game: ").upper()
         print("\n")
-        if game_choice == "DRAGON" or "STANDARD" or "CITIES":
-            x = wordsdict[game_choice]
-            # selects a random word from the appropriate .txt file
-            with open(x, "r") as file:
+        if game_choice == "DRAGON":
+            with open("dragon_words.txt", "r") as file:
                 allText = file.read()
                 words = list(map(str, allText.split()))
                 picked = random.choice(words).upper()
-                print(f"{name}, you chose the dragon words")
+                # print(picked)
+                print(f"{name}, you chose the easy words")
+                # run_game_choice(picked, name)
+                get_game_level(picked, name)
+                break
+        elif game_choice == "CITIES":
+            with open("cities_words.txt", "r") as file:
+                allText = file.read()
+                words = list(map(str, allText.split()))
+                picked = random.choice(words).upper()
+                print(f"{name}, you chose the medium words")
+                # run_game_choice(picked, name)
+                get_game_level(picked, name)
+                break
+        elif game_choice == "STANDARD":
+            with open("words.txt", "r") as file:
+                allText = file.read()
+                words = list(map(str, allText.split()))
+                picked = random.choice(words).upper()
+                print(f"{name}, you chose the hard words")
                 get_game_level(picked, name)
                 break
         else:
             print(f"{name} that is not a valid choice, please try again")
-            print("You must choose from, DRAGON, CITIES or STANDARD")
+            print("You must chose from, EASY, MEDIUM, HARD")
             print("\n")
             continue
 
