@@ -56,6 +56,12 @@ This project has been tested throughout its inception. Each input has been thoro
 * Play again input - This has been tested so that it will only accept the corect letters. To make sure that the input is correct I have made sure that any input is converted to capitals using the upper() method. It checkes for the "Y" and if so it will start the game again, if anythong else is pressed the game will end and a response will be returned to the user to say Goodbye.
 
 ### Validator Testing
+The website was extensively tested as it was developed using:
+* console.log().
+* terminal by printing the expected outcome.
+* Testing scenarios manually.
+* Each Python file was run through pep8 online and returned no errors.
+
 [Click here for the PEP8 online Validation](assets/images/pep8_validation.png)
 
 ## Deployment on Heroku
