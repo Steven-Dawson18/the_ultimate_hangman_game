@@ -23,7 +23,7 @@ def user_input():
             continue
         else:
             print("\n")
-            print(f"Hi {name} are you ready to play hangman?")
+            print(f"Hi {name}, are you ready to play hangman?")
             print("There are three catagories to choose from")
             print("How to train your dragon")
             print("Worlds major Cities")

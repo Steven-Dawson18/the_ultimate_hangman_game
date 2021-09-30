@@ -56,12 +56,18 @@ This project has been tested throughout its inception. Each input has been thoro
 * Play again input - This has been tested so that it will only accept the corect letters. To make sure that the input is correct I have made sure that any input is converted to capitals using the upper() method. It checkes for the "Y" and if so it will start the game again, if anythong else is pressed the game will end and a response will be returned to the user to say Goodbye.
 
 ### Validator Testing
+[Click here for the PEP8 online Validation](assets/images/pep8_validation.png)
 
 ## Deployment on Heroku
 
 * Log onto Heroku and click the create new app button
 * Enter a unique name for your application
 * Select the region closest to you
+* Set environment in Heroku App
+* Go to settings, then click on reveal config vars
+* Enter your key value pairs - KEY = PORT, VALUE = 8000
+* Add buildpack python
+* Add buildpack nodejs
 * Set your deployment method to 'GitHub'
 * Search for the repository you wish to deploy from
 * Enable automatic deploy
