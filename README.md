@@ -76,6 +76,9 @@ This project has been tested throughout its inception. Each input has been thoro
 
 3. As a visitor to the website, I want to have a choice of difficulty levels.
 
+[Game Levels](assets/images/client_story_3.png)
+
+* The user is given three levels of difficulty to choose from.
 
 4. As a user I want to know if I guessed correctly and see it displayed in the hidden word.
 5. As a user I want to know if I guessed incorrectly and see a hangman image and how many guesses I have left.
