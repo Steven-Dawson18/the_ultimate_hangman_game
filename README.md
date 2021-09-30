@@ -33,6 +33,10 @@ The live game can be viewed [here](https://ultimate-hangman.herokuapp.com/).
 * Result of the game is displayed to the user.
 * An option to play again is displayed to the user.
 
+## Technologies Used
+
+*Python
+
 ## Bugs
 ### Fixed
 * On the user name input I found that the user could simply enter what they wanted or indeed nothing at all. To fix this I used a while loop to check the input was alpha.
@@ -115,6 +119,10 @@ This project has been tested throughout its inception. Each input has been thoro
 
 * Each Python file was run through pep8 online and returned no errors.
 [Click here for the PEP8 online Validation](assets/images/pep8_validation.png)
+
+### Testing on Devices
+
+* I have tested the deployed Heroku app on different devices such as Macbook Pro, Samsung Galaxy Tab and iphone. I have found no issues with the game working on them.
 
 ## Deployment on Heroku
 
