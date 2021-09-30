@@ -40,6 +40,13 @@ def user_input():
             game_choice(name)
 
 
+wordsdict = {
+        "DRAGON": "dragon_words.txt",
+        "CITIES": "cities_words.txt",
+        "STANDARD": "words.txt"
+    }
+    
+
 def game_choice(name):
     """
     This function will take the input from the user and select
