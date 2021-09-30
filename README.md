@@ -93,8 +93,23 @@ This project has been tested throughout its inception. Each input has been thoro
 * The user is informed if their guess is incorrect. A list of the letters they have guessed so far will be displayed along with the number of guesses they have left and an image of the hangman position they are at.
 
 6. As a user I want to know if I have already guessed a letter.
+
+[Guessed already](assets/images/client_story_6.png)
+
+* The user will be informed if they have already guessed a letter and asked to try again. They will not lose a life.
+
 7. As a user I want to know if I have won or lost.
+
+[Win](assets/images/client_story_7.png)
+[Lost](assets/images/client_story_75.png)
+
+* The user is informed if they won or lost the game with a statement being returned to them. they are also informed of what the hidden word was.
+
 8. As a user I want to have the choice to play again or not.
+
+[Play again](assets/images/client_story_8.png)
+
+* When the user has either been successfull in guessing the word or failed to guess the word they will be invited to play again. If they select yes they will be invited to enter their name again to restart. If they choose no then they will be shown a goodbye message and the game will end.
 
 ### Validator Testing
 
