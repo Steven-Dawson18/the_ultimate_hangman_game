@@ -44,7 +44,7 @@ The live game can be viewed [here](https://ultimate-hangman.herokuapp.com/).
 ## Testing
 This project has been tested throughout its inception. Each input has been thoroughly tested to make sure that any invalid inputs are handled correctly and a response is shown to the user.
 
-* Name input - 
+* Name input - This has been tested so that it will only accept letters. I did this by creating a while loop to check if the input is alpha(). To make sure that the input is correct I have made sure that any input is converted to capitals using the upper() method.
 
 * Game catagory input - This has been tested so that it will only accept the corect three words. To make sure that the input is correct I have made sure that any input is converted to capitals using the upper() method. I have also checked for any other invalid inputs and returned a message to the user to state the error and to input again.
 
