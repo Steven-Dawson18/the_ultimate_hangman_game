@@ -45,7 +45,7 @@ wordsdict = {
         "CITIES": "cities_words.txt",
         "STANDARD": "words.txt"
     }
-    
+
 
 def game_choice(name):
     """
@@ -55,36 +55,19 @@ def game_choice(name):
     while True:
         game_choice = input("Please choose your game: ").upper()
         print("\n")
-        if game_choice == "DRAGON":
-            with open("dragon_words.txt", "r") as file:
+        if game_choice in wordsdict.keys():
+            with open(wordsdict[game_choice], "r") as file:
                 allText = file.read()
                 words = list(map(str, allText.split()))
                 picked = random.choice(words).upper()
                 # print(picked)
-                print(f"{name}, you chose the easy words")
+                print(f"{name}, you chose the {game_choice} words")
                 # run_game_choice(picked, name)
-                get_game_level(picked, name)
-                break
-        elif game_choice == "CITIES":
-            with open("cities_words.txt", "r") as file:
-                allText = file.read()
-                words = list(map(str, allText.split()))
-                picked = random.choice(words).upper()
-                print(f"{name}, you chose the medium words")
-                # run_game_choice(picked, name)
-                get_game_level(picked, name)
-                break
-        elif game_choice == "STANDARD":
-            with open("words.txt", "r") as file:
-                allText = file.read()
-                words = list(map(str, allText.split()))
-                picked = random.choice(words).upper()
-                print(f"{name}, you chose the hard words")
                 get_game_level(picked, name)
                 break
         else:
             print(f"{name} that is not a valid choice, please try again")
-            print("You must chose from, EASY, MEDIUM, HARD")
+            print("You must choose from, DRAGON, CITIES or STANDARD")
             print("\n")
             continue
 
