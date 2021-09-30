@@ -81,6 +81,11 @@ This project has been tested throughout its inception. Each input has been thoro
 * The user is given three levels of difficulty to choose from.
 
 4. As a user I want to know if I guessed correctly and see it displayed in the hidden word.
+
+[Game Levels](assets/images/client_story_4.png)
+
+* The user is congratulated on getting a guess correct and the letter guessed is input into the hidden word and displayed to the user.
+
 5. As a user I want to know if I guessed incorrectly and see a hangman image and how many guesses I have left.
 6. As a user I want to know if I have already guessed a letter.
 7. As a user I want to know if I have won or lost.
