@@ -14,14 +14,13 @@ The live game can be viewed [here](https://ultimate-hangman.herokuapp.com/).
 ## Client Stories
 
 1. As an new visitor to the website, I want to easily be able to understand what the game is about.
-2. As an new visitor to the website, I want to easily be able to understand how the game works.
-3. As a visitor to the website, I want to have a choice of game catagories.
-4. As a visitor to the website, I want to have a choice of difficulty levels.
-5. As a user I want to know if I guessed correctly and see it displayed in the hidden word.
-6. As a user I want to know if I guessed incorrectly and see a hangman image and how many guesses I have left.
-7. As a user I want to know if I have already guessed a letter.
-8. As a user I want to know if I have won or lost.
-9. As a user I want to have the choice to play again or not.
+2. As a visitor to the website, I want to have a choice of game catagories.
+3. As a visitor to the website, I want to have a choice of difficulty levels.
+4. As a user I want to know if I guessed correctly and see it displayed in the hidden word.
+5. As a user I want to know if I guessed incorrectly and see a hangman image and how many guesses I have left.
+6. As a user I want to know if I have already guessed a letter.
+7. As a user I want to know if I have won or lost.
+8. As a user I want to have the choice to play again or not.
 
 ## Features
 
@@ -69,18 +68,20 @@ This project has been tested throughout its inception. Each input has been thoro
 
 * The game immediately informs you that you are about to play hangman. Once you enter your name you are then told how to play the game, as shown in the image above.
 
-2. As an new visitor to the website, I want to easily be able to understand how the game works.
+2. As a visitor to the website, I want to have a choice of game catagories.
 
-[Game information](assets/images/client_story_1.png)
+[Game Category](assets/images/client_story_2.png)
 
-* The game is explained
-3. As a visitor to the website, I want to have a choice of game catagories.
-4. As a visitor to the website, I want to have a choice of difficulty levels.
-5. As a user I want to know if I guessed correctly and see it displayed in the hidden word.
-6. As a user I want to know if I guessed incorrectly and see a hangman image and how many guesses I have left.
-7. As a user I want to know if I have already guessed a letter.
-8. As a user I want to know if I have won or lost.
-9. As a user I want to have the choice to play again or not.
+* The user is given three choices of category, Dragons, Cities and Standard words.
+
+3. As a visitor to the website, I want to have a choice of difficulty levels.
+
+
+4. As a user I want to know if I guessed correctly and see it displayed in the hidden word.
+5. As a user I want to know if I guessed incorrectly and see a hangman image and how many guesses I have left.
+6. As a user I want to know if I have already guessed a letter.
+7. As a user I want to know if I have won or lost.
+8. As a user I want to have the choice to play again or not.
 
 ### Validator Testing
 
