@@ -32,13 +32,30 @@ Once you have chosen the game and level you will have the secret word displayed 
 ## Features
 
 * User input to collect the name of the user to use in throughout the game.
-* User has choice to pick from three categoris of words fot the game.
+
+[User input](assets/images/client_story_1.png)
+
+* User has choice to pick from three categories of words for the game.
+
+[Game Category](assets/images/client_story_2.png)
+
 * User has choice of three difficulty levels for their game.
+
+[Game Levels](assets/images/client_story_3.png)
+
 * The chosen word for the game is displayed as a hidden word.
+
+[Guess confirmation](assets/images/client_story_4.png)
+
 * The hangman image is displayed along with how many guesses the user has remaining.
+
+[Guess incorrect](assets/images/client_story_5.png)
+
 * Result of guess is displayed to the user.
 * Result of the game is displayed to the user.
 * An option to play again is displayed to the user.
+
+[Lost](assets/images/client_story_75.png)
 
 ### Future Features
 
