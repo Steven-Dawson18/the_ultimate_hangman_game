@@ -40,7 +40,7 @@ def user_input():
             game_choice(name)
 
 
-wordsdict = {
+GAME_CHOICES = {
         "DRAGON": "dragon_words.txt",
         "CITIES": "cities_words.txt",
         "STANDARD": "words.txt"
@@ -55,8 +55,8 @@ def game_choice(name):
     while True:
         game_choice = input("Please choose your game: ").upper()
         print("\n")
-        if game_choice in wordsdict.keys():
-            with open(wordsdict[game_choice], "r") as file:
+        if game_choice in GAME_CHOICES.keys():
+            with open(GAME_CHOICES[game_choice], "r") as file:
                 allText = file.read()
                 words = list(map(str, allText.split()))
                 picked = random.choice(words).upper()
