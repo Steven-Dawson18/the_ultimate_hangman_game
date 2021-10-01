@@ -33,6 +33,12 @@ The live game can be viewed [here](https://ultimate-hangman.herokuapp.com/).
 * Result of the game is displayed to the user.
 * An option to play again is displayed to the user.
 
+### Future Features
+
+* A further feature to improve this game could be to add a hint for the secret word. Possibly by using an API.
+
+* There could possibly be a competition mode where the user tries to guess a word in as few goes as possible and the result gets placed on a high score board.
+
 ## Technologies Used
 
 *Python
