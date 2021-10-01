@@ -6,9 +6,14 @@ The aim is to provide a fun and excitiong game where the user can escape the toi
 ## Description
 This game of Ultimate Hangman provides the user with three optional catagories to choose from. Depending on their choice the words will be related to that catagory. They are then given three further options to select the difficulty level they require, easy, where they will get 8 guesses, medium, where they will get 6 guesses and hard where they will only get 3 guesses. The selected catagory word is hidden behind - - - and the user is invited to have a guess at a letter. If they get it correct the hidden word will reveal where that letter fits into the word and they will be invited to have another go. If the user guesses incorrectly they will be informed of their choice and a list of letters they have already guessed. A picture of the hangman will be displayed along with the number of guesses they have remaining. Once the user has guessed the word or had failed to guess the word they will be informed of the result, the word they were trying to guess and receive an invitiation to play again or not.
 
+The live game can be viewed [here](https://ultimate-hangman.herokuapp.com/).
+
 [Ultimate Hangman](assets/images/responsiveness.png)
 
-The live game can be viewed [here](https://ultimate-hangman.herokuapp.com/).
+## How to play
+
+To play Ultimat Hangman you will first need to enter your name. You will then be given three choices of game category. Enter the category choice adn you will then be given three choices of difficulty level to play. Easy gives you 8 guesses, medium gives you 6 guesses and hard gives you 3 guesses.
+Once you have chosen the game and level you will have the secret word displayed behind dashed. It will tell you how many letters there are in the word and how many guesses you have. You will then be asked to make a guess of a letter. Once you enter a guess the computer wil check if your guess is in the secret word. If it is the the letter will be displayed amongst the dashes in the position it holds in the word. If you guess incorrectly you will see the hangman picture and be told that the letter is not in the secret word, with how many guesses you have remaining. If you manage to guess the word within the number of guesses for your chosen level you will be congratulated and asked if you want to play again or not. If you fail to guess the word, you will be told that you failed to guess correctly and the secret word you were trying to guess will be displayed. You will then be asked if you wish to play again or not.
 
 ## Wireframes
 [Click here for the desktop wireframe](assets/images/hangman.png)
