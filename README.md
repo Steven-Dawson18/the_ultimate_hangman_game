@@ -88,6 +88,10 @@ The time library was utilised in order to use the sleep method. This method when
 ### Unfixed
 * None
 
+## Data Model
+
+I decided to use text files for the words each game will run to get a secret word. I placed these in a dictionary and called the key to access the text file that is needed to run each game.
+
 ## Testing
 
 The website was extensively tested as it was developed using:
@@ -172,6 +176,7 @@ This project has been tested throughout its inception. Each input has been thoro
 
 ## Deployment on Heroku
 
+* Fork or clone this repository
 * Log onto Heroku and click the create new app button
 * Enter a unique name for your application
 * Select the region closest to you
