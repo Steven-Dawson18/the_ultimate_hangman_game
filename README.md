@@ -29,6 +29,11 @@ Once you have chosen the game and level you will have the secret word displayed 
 7. As a user I want to know if I have won or lost.
 8. As a user I want to have the choice to play again or not.
 
+
+## Flow
+
+[Game flow](assets/images/flowchart_hangman.jpg)
+
 ## Features
 
 * User input to collect the name of the user to use in throughout the game.
@@ -65,7 +70,15 @@ Once you have chosen the game and level you will have the secret word displayed 
 
 ## Technologies Used
 
-*Python
+* Python
+
+### Libraries Used
+
+* Random
+The random library was used to select a random word from the txt files.
+
+* Time - sleep
+The time library was utilised in order to use the sleep method. This method when implemented in the game creates the impression that the computer is checking/thinking which adds to the suspense and experience of the game.
 
 ## Bugs
 ### Fixed
