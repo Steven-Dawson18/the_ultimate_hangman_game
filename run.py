@@ -112,6 +112,7 @@ def hangman_image_state(game_level, guesses_left):
         hangman_image_state_hard(guesses_left)
 
 
+# This function waws adapted from a youtube tutorial linked in README.md
 def think():
     """
     This function makes the game wait which makes it
@@ -134,6 +135,7 @@ def update(word_as_a_list, secret_word):
         print(i, end=" ")
 
 
+# This function ws adapted from a youtube tutorail linked in the README.md file
 def run_game_choice(
         hangman_image_state, guesses_left, game_level, picked, name):
     """

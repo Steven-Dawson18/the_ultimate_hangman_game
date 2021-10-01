@@ -118,7 +118,10 @@ This project has been tested throughout its inception. Each input has been thoro
 ### Validator Testing
 
 * Each Python file was run through pep8 online and returned no errors.
-[Click here for the PEP8 online Validation](assets/images/pep8_validation.png)
+
+[Click here for the PEP8 online Validation of run.py](assets/images/pep8_validation.png)
+
+[Click here for the PEP8 online Validation of hangman_pictures.py](assets/images/pep8_online_validation_2.png)
 
 ### Testing on Devices
 
@@ -142,7 +145,9 @@ This project has been tested throughout its inception. Each input has been thoro
 None
 
 ### Code
-None
+* The run_game_choice function was adapted from this tutorial https://www.youtube.com/watch?v=m4nEnsavl6w&t=173s
+
+* The think function was adapted from this tutorial https://www.youtube.com/watch?v=7sVnul-StrU&t=992s
 
 ### Content
 None
