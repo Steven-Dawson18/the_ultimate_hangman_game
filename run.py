@@ -97,6 +97,8 @@ def get_game_level(picked, name):
             hangman_image_state(game_level, guesses_left)
             run_game_choice(
                 hangman_image_state, guesses_left, game_level, picked, name)
+        else:
+            print(f"{name}, that is not a valid choice")
 
 
 def hangman_image_state(game_level, guesses_left):
