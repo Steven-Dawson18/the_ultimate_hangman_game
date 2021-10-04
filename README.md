@@ -85,6 +85,7 @@ The time library was utilised in order to use the sleep method. This method when
 * On the user name input I found that the user could simply enter what they wanted or indeed nothing at all. To fix this I used a while loop to check the input was alpha.
 * I found a bug with the user guess when playing. If the user didn't enter anything or the user input more than one letter the program would just ask for the user to input a letter again. So I added print statements to respont to the user. 
 * Also if the user input a number the program would jump back to the difficulty level choices. To solve this I used a while loop and if elif statement.
+* To stop an error occuring where the user could enter more than one character as the guess, I had it select only the first character that was input. However this proved troublesome as if I entered numbers or special characters it through an error. To solve this I added elif else statements to the chame_choice function to validate the input.
 
 ### Unfixed
 * None
