@@ -8,7 +8,7 @@ This game of Ultimate Hangman provides the user with three optional catagories t
 
 The live game can be viewed [here](https://ultimate-hangman.herokuapp.com/).
 
-[Ultimate Hangman](assets/images/responsiveness.png)
+![Ultimate Hangman](assets/images/responsiveness.png)
 
 ## How to play
 
@@ -89,8 +89,8 @@ The time library was utilised in order to use the sleep method. This method when
 * There were numerous faults in the terminal relating to lines that were too long. I solved these by rewording print statements and moving function parameters on to a different line.
 * I noticed that the number of letters in the word was being printed before the computer thinks of the word, so I adjusted the order of statements.
 
-### Unfixed
-* None
+### Known issues
+* I am aware that there is an issue in the program when the think function is running, but I have been unable to come up with a solution to this. The user can input another letter whilst the program is checking if the previous letter is in the word. Any letters the user inputs still get processed and it does not throw up a fault in the game. It's just not as aesthetically pleasing as I would have liked.
 
 ## Data Model
 
@@ -119,50 +119,50 @@ This project has been tested throughout its inception. Each input has been thoro
 
 1. As an new visitor to the website, I want to easily be able to understand what the game is about.
 
-[Game information](assets/images/client_story_1.png)
+![Game information](assets/images/client_story_1.png)
 
 * The game immediately informs you that you are about to play hangman. Once you enter your name you are then told how to play the game, as shown in the image above.
 
 2. As a visitor to the website, I want to have a choice of game catagories.
 
-[Game Category](assets/images/client_story_2.png)
+![Game Category](assets/images/client_story_2.png)
 
 * The user is given three choices of category, Dragons, Cities and Standard words.
 
 3. As a visitor to the website, I want to have a choice of difficulty levels.
 
-[Game Levels](assets/images/client_story_3.png)
+![Game Levels](assets/images/client_story_3.png)
 
 * The user is given three levels of difficulty to choose from.
 
 4. As a user I want to know if I guessed correctly and see it displayed in the hidden word.
 
-[Guess confirmation](assets/images/client_story_4.png)
+![Guess confirmation](assets/images/client_story_4.png)
 
 * The user is congratulated on getting a guess correct and the letter guessed is input into the hidden word and displayed to the user.
 
 5. As a user I want to know if I guessed incorrectly and see a hangman image and how many guesses I have left.
 
-[Guess incorrect](assets/images/client_story_5.png)
+![Guess incorrect](assets/images/client_story_5.png)
 
 * The user is informed if their guess is incorrect. A list of the letters they have guessed so far will be displayed along with the number of guesses they have left and an image of the hangman position they are at.
 
 6. As a user I want to know if I have already guessed a letter.
 
-[Guessed already](assets/images/client_story_6.png)
+![Guessed already](assets/images/client_story_6.png)
 
 * The user will be informed if they have already guessed a letter and asked to try again. They will not lose a life.
 
 7. As a user I want to know if I have won or lost.
 
-[Win](assets/images/client_story_7.png)
-[Lost](assets/images/client_story_75.png)
+![Win](assets/images/client_story_7.png)
+![Lost](assets/images/client_story_75.png)
 
 * The user is informed if they won or lost the game with a statement being returned to them. they are also informed of what the hidden word was.
 
 8. As a user I want to have the choice to play again or not.
 
-[Play again](assets/images/client_story_8.png)
+![Play again](assets/images/client_story_8.png)
 
 * When the user has either been successfull in guessing the word or failed to guess the word they will be invited to play again. If they select yes they will be invited to enter their name again to restart. If they choose no then they will be shown a goodbye message and the game will end.
 
@@ -170,9 +170,9 @@ This project has been tested throughout its inception. Each input has been thoro
 
 * Each Python file was run through pep8 online and returned no errors.
 
-[Click here for the PEP8 online Validation of run.py](assets/images/pep8_validation.png)
+![Click here for the PEP8 online Validation of run.py](assets/images/pep8_validation.png)
 
-[Click here for the PEP8 online Validation of hangman_pictures.py](assets/images/pep8_online_validation_2.png)
+![Click here for the PEP8 online Validation of hangman_pictures.py](assets/images/pep8_online_validation_2.png)
 
 ### Testing on Devices
 
