@@ -144,11 +144,11 @@ def run_game_choice(
     This function chooses which set of words to choose from
     """
 
-    print("The word has", len(picked), "letters")
     print(f"{name}, you have {guesses_left} guesses")
     print("Let me think of a word")
     think()
     print("\n")
+    print("The word has", len(picked), "letters")
     print(f"{name}, your chosen word is: ")
     print("\n")
     secret_word = list("-") * len(picked)
