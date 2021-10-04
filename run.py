@@ -126,6 +126,7 @@ def think():
         sleep(.3)
 
 
+# This function waws adapted from a youtube tutorial linked in README.md
 def update(word_as_a_list, secret_word):
     """
     This function updates the secret word with the correct

@@ -86,6 +86,8 @@ The time library was utilised in order to use the sleep method. This method when
 * I found a bug with the user guess when playing. If the user didn't enter anything or the user input more than one letter the program would just ask for the user to input a letter again. So I added print statements to respont to the user. 
 * Also if the user input a number the program would jump back to the difficulty level choices. To solve this I used a while loop and if elif statement.
 * To stop an error occuring where the user could enter more than one character as the guess, I had it select only the first character that was input. However this proved troublesome as if I entered numbers or special characters it through an error. To solve this I added elif else statements to the chame_choice function to validate the input.
+* There were numerous faults in the terminal relating to lines that were too long. I solved these by rewording print statements and moving function parameters on to a different line.
+* I noticed that the number of letters in the word was being printed before the computer thinks of the word, so I adjusted the order of statements.
 
 ### Unfixed
 * None
@@ -198,6 +200,8 @@ This project has been tested throughout its inception. Each input has been thoro
 * The run_game_choice function was adapted from this tutorial https://www.youtube.com/watch?v=m4nEnsavl6w&t=173s
 
 * The think function was adapted from this tutorial https://www.youtube.com/watch?v=7sVnul-StrU&t=992s
+
+* The update function was adapted from this tutorial https://www.youtube.com/watch?v=7sVnul-StrU&t=992s
 
 ### Content
 None
